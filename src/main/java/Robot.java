@@ -9,7 +9,8 @@ public class Robot {
     }
 
     public void showStatus() {
-        System.out.println("x = " + coordinate_x + " y = " + coordinate_y + " direction = " + direction);
+        // System.out.println("x = " + coordinate_x + " y = " + coordinate_y + " direction = " + direction);
+        System.out.println(coordinate_x + " " + coordinate_y + " " + direction);
     }
 
     public int getCoordinateX() {
@@ -28,6 +29,13 @@ public class Robot {
         this.direction = direction;
     }
 
+
+    public void parseMovement(String movements) {
+        for(int i=0; i<movements.length(); i++) {
+            char movement = movements.charAt(i);
+            // turn(movement);
+        }
+    }
 
     public void turn(Movement movement) {
 
@@ -81,6 +89,6 @@ public class Robot {
 
         }
 
-        this.showStatus();
+        // this.showStatus();
     }
 }
